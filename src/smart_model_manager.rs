@@ -12,6 +12,8 @@
 use std::fs;
 use std::io::{self, Write};
 use std::path::{Path, PathBuf};
+#[cfg(target_os = "windows")]
+use std::os::windows::process::CommandExt;
 use std::process::{Child, Command};
 use std::sync::{Arc, Mutex};
 use std::thread;
